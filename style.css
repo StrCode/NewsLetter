@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(./assets/font/Roboto-Bold.ttf);
+    line-height: 1.2rem;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(./assets/font/Roboto-Regular.ttf);
+    line-height: 1.5;
+}
+
+body {
+    background: hsl(235, 18%, 26%);
+    margin: 0;
+    font-size: 1rem;
+    font-family: Roboto-Regular;
+    color: hsl(235, 18%, 26%);
+}
+.container {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 900px;
+    height: 600px;
+    border-radius: 24px;
+}
+
+.left {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.right {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3.25rem;
+    color: hsl(234, 29%, 20%);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Roboto-Bold;
+}
+
+p {
+    color: hsl(235, 18%, 26%);
+    font-family: Roboto-Regular;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.list-updates {
+    margin: 0.8rem 0rem;
+}
+
+.list-updates li {
+    margin-bottom: 0.85rem;
+    list-style-type: none;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    background: url("./assets/images/icon-list.svg") no-repeat;
+    left: -40px;
+    top: -2px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1;
+}
+
+input,
+button {
+    all: unset;
+}
+
+label {
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+    flex-basis: 50%;
+    font-family: Roboto-Bold;
+}
+
+input {
+    flex-basis: 100%;
+    padding: 0.85em 1.25rem 0.85rem;
+    margin-bottom: 25px;
+    background: hsl(0, 0%, 100%);
+    border: 0.8px solid hsl(231, 7%, 60%);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:hover {
+    outline: 1px solid hsl(235, 18%, 26%);
+}
+
+input:active,
+input:focus-visible {
+    padding: 1.5px solid hsl(235, 18%, 26%);
+    outline: 1px solid hsl(235, 18%, 26%);
+}
+
+button {
+    flex-basis: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-family: Roboto-Bold;
+    background: hsl(234, 29%, 20%);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.email-error {
+    margin-bottom: 0.8rem;
+    color: #fe6940;
+    flex-basis: 50%;
+    align-self: flex-start;
+    text-align: right;
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+    font-family: Roboto-Bold;
+}
+
+.error-message {
+    background: #fe694043;
+    color: #fe69405b;
+    border: 1px solid #fe6940;
+}
+
+.placeHolderTextError::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fe6940a5;
+}
+
+.placeHolderText::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+}
+
+button:hover {
+    background-image: repeating-linear-gradient(to right, #ff5575, #fe6840);
+    box-shadow: 0px 15px 20px 0px #ff54736c;
+}
+
+/* Success Container*/
+
+.success-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 450px;
+    height: 450px;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+h3 {
+    font-size: 3.2rem;
+    color: hsl(234, 29%, 20%);
+    margin: 1.4rem 0 0.5rem 0;
+
+    font-family: Roboto-Bold;
+    font-weight: 700;
+}
+
+.user-email {
+    font-weight: 700;
+    font-family: Roboto-Bold;
+}
+
+@media only screen and (max-width: 540px) {
+    .success-container {
+        height: 100vh;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 80px 20px;
+        border-radius: 0px;
+        flex: 1;
+    }
+
+    .success-img {
+        width: 64px;
+    }
+
+    .success-button {
+        margin-top: auto;
+    }
+
+    .newsletter-container {
+        height: 100vh;
+        border-radius: 0px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: stretch;
+    }
+
+    .left {
+        padding: 20px;
+    }
+    .right {
+        padding: 0px;
+    }
+    img {
+        width: 100%;
+        padding: 0%;
+    }
+
+    h2 {
+        font-size: 2.75rem;
+    }
+}

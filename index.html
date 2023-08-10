@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="success-container" style="display: none;">
+      <img class="success-img" width="65px" src="./assets/images/icon-success.svg" alt="">
+      <h3>Thanks for subscribing!</h3>
+      <p>A confirmation email has been sent to <span class="user-email"></span>
+        Please open it and check the button inside to confirm your subscription.
+      </p>
+      <button class="success-button">Dismiss message</button>
+    </div>
+    <!-- Newsletter sign up form-->
+    <div class="newsletter-container " >
+       <div class="left">
+            <h2>Stay updated!</h2>
+            <p>
+                Join 60,000+ product managers recieving monthly updates
+                on:
+            </p>
+            <ul class="list-updates">
+                <li>Product Discovery and building what matters</li>
+                <li>Measuring to ensure updates are a success</li>
+                <li>And much more</li>
+            </ul>
+    
+      
+              <form action="">
+                <div class="newsletter-form">
+                  <label for="email">Email address</label>
+                  <span class="email-error">valid email required</span>
+                  <input type="email" placeholder="email@company.com" autocomplete="off" id="email">
+                  <button class="form-button" type="submit">Subscribe to monthly newsletter</button>
+             </div>
+
+                </form>
+            
+        </div>
+        <div class="right">
+          <picture>
+            <source media='(max-width: 768px)' srcSet="./assets/images/illustration-sign-up-mobile.svg"  />
+            <source media='(min-width: 768px)' srcSet="./assets/images/illustration-sign-up-desktop.svg" />
+            <img width="380px" src="./assets/images/illustration-sign-up-desktop.svg" alt='hero' />
+        </picture>
+        </div>
+    </div>
+        </div>
+        <script src="./script.js"></script>
+
+</body>
+</html>
